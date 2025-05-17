@@ -203,7 +203,7 @@ const HomeInvestor = () => {
       }
 
       try {
-        const response = await getFromBackend(`${BASE_URL}/auth/details`);
+        const response = await getFromBackend(`${BASE_URL}/auth/detailsIn`);
         setUsername(response.data.username);
       } catch (err) {
         setError(err.response?.data?.message || "Failed to fetch user details.");
@@ -247,7 +247,7 @@ const HomeInvestor = () => {
         <div className="offer-card">
           <h3>Look for Eligible Entrepreneurs</h3>
           <p>Invest your funds in promising startups and grow your portfolio.</p>
-          <button className="offer-btn" onClick={() => navigate("/eligible-entrepreneurs")}>
+          <button className="offer-btn" onClick={() => navigate("/investor/ListOfEntre")}>
             Explore Now
           </button>
         </div>

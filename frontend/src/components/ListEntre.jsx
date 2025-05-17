@@ -15,9 +15,8 @@ export default function EntrepreneurProfile() {
 
   async function fetchEntrepreneurs(filter = "") {
     try {
-      const url = filter
-        ? `${BASE_URL}/search/entrepreneur/${filter}`
-        : `${BASE_URL}/search/entrepreneur`;
+     
+         const url=filter?`${BASE_URL}/search/entre/${filter}`:`${BASE_URL}/search/entre`;
 
       const response = await getFromBackend(url);
       console.log("Fetched Entrepreneurs:", response);
@@ -37,7 +36,7 @@ export default function EntrepreneurProfile() {
     <div className="entrepreneur-container">
       {/* Header */}
       <div className="entrepreneur-header">
-        <h1>Discover Entrepreneurs Seeking Funding</h1>
+        <h1>Top Emerging Entrepreneurs</h1>
       </div>
 
       {/* Search Bar */}
@@ -75,13 +74,13 @@ export default function EntrepreneurProfile() {
                   <td>
                     <button
                       className="contact-button"
-                      onClick={() => navigate(`/message/${entrepreneur.emailid}`)}
+                      onClick={() => navigate(`/chatbox/${entrepreneur.emailid}`)}
                     >
                       Contact
                     </button>
                     <button
                       className="profile-button"
-                      onClick={() => navigate(`/profileEn/?email=${entrepreneur.emailid}`)}
+                      onClick={() => navigate(`/profileE/${entrepreneur.emailid}`)}
                     >
                       View Profile
                     </button>

@@ -10,10 +10,13 @@ import HomeEntre from './components/HomeEntre.jsx';
 import HomeInvestor from './components/HomeInvestor.jsx';
 import EntreConnect from './components/EntreConnect.jsx';
 import InvestorProfile from './components/ListOfInvestors/InvestorProfile.jsx';
-import ChatPage from './components/Chatbox/chatbox.jsx';
+import ChatBox from './components/Chatbox/chatbox.jsx';
+import EntrepreneurProfile from './components/ListEntre.jsx';
 // import ProfileInvestors from './components/ProfileInvestors.jsx';
 // import ProfileInvestors from './components/ProfileInvestor.jsx';
 import ProfileInvestors from './components/ProfileInvestor.jsx';
+import ProfileEntre from './components/ProfileEntre.jsx';
+import ChatPage from './components/ChatPages/ChatPage.jsx';
 
 function App() {
     const router = createBrowserRouter([
@@ -54,12 +57,24 @@ function App() {
         element: <><InvestorProfile /></>
       },
       {
+        path: "/investor/ListOfEntre",
+        element: <><EntrepreneurProfile /></>
+      },
+      {
         path: "/chatbox/:emailid",
-        element: <><ChatPage /></>
+        element: <><ChatBox /></>
       },
       {
         path: "/profileIn/:emailid",
         element: <><ProfileInvestors /></>
+      },
+      {
+        path: "/profileE/:emailid",
+        element: <><ProfileEntre/></>
+      },
+      {
+        path: "/chatpage",
+        element: <><ChatPage/></>
       },
     ])
     return <RouterProvider router={router} />;

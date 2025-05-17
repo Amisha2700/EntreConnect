@@ -19,6 +19,7 @@
   - Pitch their ideas directly
   - Request meetings
   - View mentor/investor expertise and track records
+- Curated Ranking of the Top 20 Entrepreneurs Based on Investor Ratings and Market Signals.
 
 ### 🧠 AI-Powered Chatbot Assistant
 - Integrated intelligent chatbot for answering questions on:
@@ -36,10 +37,11 @@
 **Backend:**
 - Node.js with Express
 - MongoDB for data storage
+- Socket.io for real time messaging
 - Flask for peer-connect model
 
 **AI Chatbot:**
-- Gemini API  integration \
+- Gemini API  integration 
 - Custom context.js
 
 ## Team Members:

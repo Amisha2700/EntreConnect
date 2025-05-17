@@ -1,4 +1,5 @@
 import mongoose from "mongoose"
+import schemaRating from "./rating.js";
 const schema=new mongoose.Schema({
     username:{
         type:String,
@@ -21,6 +22,26 @@ const schema=new mongoose.Schema({
         type:Boolean,
         required:true,
     },
+    startupStage:{
+        type:Number,
+        required:true,
+    },
+    experience:{
+        type:Number,
+        required:true,
+    },
+    teamSize:{
+        type:Number,
+        required:true,
+    },
+    feedback:{
+        type:[schemaRating],
+        required:false
+    },
+    averageRating:{
+        type:Number,
+        defualt:0,
+    }
     },
     {timestamps:true}
 )
